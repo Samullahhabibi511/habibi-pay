@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b5cff">
+  <title>Habibi Pay</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #172033;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0757d9, #12a4ff);
+      color: white;
+      padding: 18px 20px 35px;
+      border-radius: 0 0 28px 28px;
+      box-shadow: 0 8px 25px rgba(0, 80, 180, .18);
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 15px;
+      background: white;
+      color: #0757d9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 900;
+      box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 11px;
+      opacity: .85;
+      margin-top: 3px;
+    }
+
+    .menu {
+      border: 0;
+      background: rgba(255,255,255,.18);
+      color: white;
+      width: 43px;
+      height: 43px;
+      border-radius: 13px;
+      font-size: 22px;
+    }
+
+    .hero {
+      max-width: 900px;
+      margin: 28px auto 0;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      line-height: 1.9;
+      opacity: .92;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: -18px auto 40px;
+      padding: 0 15px;
+    }
+
+    .balance {
+      background: white;
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 8px 25px rgba(20,40,80,.08);
+      margin-bottom: 18px;
+    }
+
+    .balance-title {
+      color: #68748a;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .balance-number {
+      font-size: 27px;
+      font-weight: 900;
+      color: #0757d9;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 900;
+      margin: 25px 5px 13px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .service {
+      background: white;
+      border: 0;
+      border-radius: 20px;
+      padding: 18px 12px;
+      text-align: center;
+      box-shadow: 0 7px 20px rgba(20,40,80,.07);
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .service:active {
+      transform: scale(.97);
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      margin: auto auto 10px;
+      border-radius: 16px;
+      background: #eaf3ff;
+      color: #0757d9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+    }
+
+    .service h3 {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .service p {
+      color: #7b8494;
+      font-size: 11px;
+    }
+
+    .notice {
+      margin-top: 20px;
+      background: linear-gradient(135deg, #fff, #eef7ff);
+      border-radius: 20px;
+      padding: 18px;
+      border: 1px solid #dcecff;
+    }
+
+    .notice strong {
+      display: block;
+      color: #0757d9;
+      margin-bottom: 7px;
+    }
+
+    .notice p {
+      font-size: 12px;
+      line-height: 1.8;
+      color: #667085;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #8993a5;
+      font-size: 11px;
+    }
+
+    @media (min-width: 700px) {
+      .services {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="top">
+    <div class="logo">
+      <div class="logo-box">HB</div>
+      <div class="brand">
+        Habibi Pay
+        <small>Money & Digital Services</small>
+      </div>
+    </div>
+
+    <button class="menu" onclick="showMessage()">☰</button>
+  </div>
+
+  <div class="hero">
+    <h1>به Habibi Pay خوش آمدید</h1>
+    <p>
+      خدمات پولی و دیجیتالی سریع، آسان و مطمئن
+      برای افغانستان و سایر خدمات آنلاین.
+    </p>
+  </div>
+</header>
+
+<main>
+
+  <div class="balance">
+    <div class="balance-title">موجودی حساب</div>
+    <div class="balance-number">۰ افغانی</div>
+  </div>
+
+  <div class="section-title">خدمات ما</div>
+
+  <div class="services">
+
+    <button class="service" onclick="service('احواله جات')">
+      <div class="icon">💸</div>
+      <h3>احواله جات</h3>
+      <p>ارسال پول به افغانستان</p>
+    </button>
+
+    <button class="service" onclick="service('خرید UC')">
+      <div class="icon">🎮</div>
+      <h3>خرید UC</h3>
+      <p>UC پابجی موبایل</p>
+    </button>
+
+    <button class="service" onclick="service('کریدت')">
+      <div class="icon">📱</div>
+      <h3>کریدت و بسته</h3>
+      <p>شارژ و اینترنت</p>
+    </button>
+
+    <button class="service" onclick="service('الماس IMO')">
+      <div class="icon">💎</div>
+      <h3>الماس IMO</h3>
+      <p>خرید الماس و خدمات دیجیتال</p>
+    </button>
+
+  </div>
+
+  <div class="section-title">سایر خدمات</div>
+
+  <div class="services">
+
+    <button class="service" onclick="service('TikTok')">
+      <div class="icon">🎁</div>
+      <h3>TikTok</h3>
+      <p>هدیه و خدمات</p>
+    </button>
+
+    <button class="service" onclick="service('Likee')">
+      <div class="icon">⭐</div>
+      <h3>Likee</h3>
+      <p>خدمات دیجیتال</p>
+    </button>
+
+    <button class="service" onclick="service('حساب بازی')">
+      <div class="icon">🎯</div>
+      <h3>حساب بازی</h3>
+      <p>خرید و فروش</p>
+    </button>
+
+    <button class="service" onclick="service('پشتیبانی')">
+      <div class="icon">💬</div>
+      <h3>پشتیبانی</h3>
+      <p>ارتباط با Habibi</p>
+    </button>
+
+  </div>
+
+  <div class="notice">
+    <strong>🔐 امنیت و اعتماد</strong>
+    <p>
+      Habibi Pay برای ارائه خدمات سریع و آسان طراحی می‌شود.
+      در مراحل بعدی سیستم ورود کاربران، پرداخت آنلاین،
+      ثبت سفارش و پنل مدیریت نیز اضافه خواهد شد.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Habibi Pay — All Rights Reserved
+</footer>
+
+<script>
+  function service(name) {
+    alert("خدمت «" + name + "» به‌زودی فعال می‌شود.");
+  }
+
+  function showMessage() {
+    alert("منوی Habibi Pay در نسخه بعدی فعال می‌شود.");
+  }
+</script>
+
+</body>
+        </html>
