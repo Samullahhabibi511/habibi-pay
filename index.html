@@ -2,313 +2,151 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0878f9">
 <title>Habibi Pay</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:Tahoma,Arial,sans-serif;
-}
-
-body{
-  background:#f3f7ff;
-  color:#172033;
-}
-
-button,input,select{
-  font-family:inherit;
-}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Tahoma,Arial,sans-serif}
+body{background:#f3f7ff;color:#172033}
+button,input,select{font-family:inherit}
 
 .header{
-  background:linear-gradient(135deg,#075bea,#11a8ee);
-  color:white;
-  padding:22px 18px 55px;
-  border-radius:0 0 40px 40px;
-  position:relative;
+background:linear-gradient(135deg,#075bea,#11a8ee);
+color:white;padding:22px 18px 55px;
+border-radius:0 0 40px 40px
 }
 
 .top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  max-width:1000px;
-  margin:auto;
+display:flex;align-items:center;justify-content:space-between;
+max-width:1000px;margin:auto
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
+.logo{display:flex;align-items:center;gap:12px}
 .logoBox{
-  width:58px;
-  height:58px;
-  background:white;
-  color:#0866d9;
-  border-radius:18px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:25px;
-  font-weight:bold;
-  box-shadow:0 8px 20px #0045aa55;
+width:58px;height:58px;background:white;color:#0866d9;
+border-radius:18px;display:flex;align-items:center;
+justify-content:center;font-size:25px;font-weight:bold
 }
-
-.brand h1{
-  font-size:25px;
-}
-
-.brand p{
-  font-size:13px;
-  margin-top:4px;
-  opacity:.9;
-}
+.brand h1{font-size:25px}
+.brand p{font-size:13px;margin-top:4px}
 
 .menu{
-  width:48px;
-  height:48px;
-  border:0;
-  border-radius:15px;
-  background:#ffffff22;
-  color:white;
-  font-size:25px;
+width:48px;height:48px;border:0;border-radius:15px;
+background:#ffffff22;color:white;font-size:25px
 }
 
-.hero{
-  max-width:1000px;
-  margin:42px auto 0;
-  text-align:center;
-}
+.hero{max-width:1000px;margin:42px auto 0;text-align:center}
+.hero h2{font-size:30px;margin-bottom:18px}
+.hero p{font-size:16px;line-height:2}
 
-.hero h2{
-  font-size:30px;
-  margin-bottom:18px;
-}
-
-.hero p{
-  font-size:16px;
-  line-height:2;
-  opacity:.95;
-}
-
-.container{
-  max-width:1000px;
-  margin:-25px auto 40px;
-  padding:0 16px;
-  position:relative;
-}
+.container{max-width:1000px;margin:-25px auto 40px;padding:0 16px}
 
 .balance{
-  background:white;
-  border-radius:28px;
-  padding:25px;
-  box-shadow:0 12px 35px #183b6820;
-  margin-bottom:32px;
+background:white;border-radius:28px;padding:25px;
+box-shadow:0 12px 35px #183b6820;margin-bottom:30px
 }
 
 .balanceTop{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:15px;
+display:flex;justify-content:space-between;align-items:center
 }
 
-.balanceTitle{
-  color:#78859b;
-  font-size:14px;
-}
+.balanceTitle{color:#78859b;font-size:14px}
+.balanceValue{font-size:27px;font-weight:bold;color:#0967d9}
 
-.balanceValue{
-  font-size:29px;
-  font-weight:bold;
-  color:#0967d9;
-}
-
-.currencyBox{
-  display:flex;
-  gap:8px;
-}
-
+.currencyBox{display:flex;gap:7px}
 .currencyBtn{
-  border:0;
-  padding:9px 15px;
-  border-radius:12px;
-  background:#eef5ff;
-  color:#0967d9;
-  font-weight:bold;
-  cursor:pointer;
+border:0;padding:9px 14px;border-radius:12px;
+background:#eef5ff;color:#0967d9;font-weight:bold
 }
+.currencyBtn.active{background:#0967d9;color:white}
 
-.currencyBtn.active{
-  background:#0967d9;
-  color:white;
-}
-
-.sectionTitle{
-  font-size:23px;
-  margin-bottom:18px;
-}
+.sectionTitle{font-size:23px;margin-bottom:18px}
 
 .services{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:16px;
+display:grid;grid-template-columns:repeat(2,1fr);gap:16px
 }
 
 .service{
-  background:white;
-  border:0;
-  border-radius:25px;
-  padding:25px 15px;
-  min-height:185px;
-  box-shadow:0 8px 25px #183b6814;
-  cursor:pointer;
-  transition:.2s;
-  text-align:center;
-}
-
-.service:active{
-  transform:scale(.97);
+background:white;border:0;border-radius:25px;
+padding:24px 12px;min-height:175px;
+box-shadow:0 8px 25px #183b6814;
+cursor:pointer;text-align:center
 }
 
 .icon{
-  width:70px;
-  height:70px;
-  margin:0 auto 15px;
-  border-radius:22px;
-  background:#edf5ff;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:35px;
+width:68px;height:68px;margin:0 auto 14px;
+border-radius:21px;background:#edf5ff;
+display:flex;align-items:center;justify-content:center;
+font-size:34px
 }
 
-.service h3{
-  font-size:18px;
-  margin-bottom:10px;
+.service h3{font-size:18px;margin-bottom:9px}
+.service p{color:#8290a5;font-size:12px}
+
+.order,.admin{
+background:white;margin-top:30px;padding:25px;
+border-radius:27px;box-shadow:0 8px 25px #183b6814;
+display:none
 }
 
-.service p{
-  color:#8290a5;
-  font-size:12px;
-}
+.order.show,.admin.show{display:block}
 
-.order{
-  background:white;
-  margin-top:30px;
-  padding:25px;
-  border-radius:27px;
-  box-shadow:0 8px 25px #183b6814;
-  display:none;
-}
+.order h2,.admin h2{color:#0967d9;margin-bottom:20px}
 
-.order.show{
-  display:block;
-}
+.field{margin-bottom:15px}
+.field label{display:block;margin-bottom:8px;font-size:14px;font-weight:bold}
 
-.order h2{
-  color:#0967d9;
-  margin-bottom:20px;
-}
-
-.field{
-  margin-bottom:16px;
-}
-
-.field label{
-  display:block;
-  margin-bottom:8px;
-  font-size:14px;
-  font-weight:bold;
-}
-
-.field input,
-.field select{
-  width:100%;
-  padding:14px;
-  border:1px solid #dce5f2;
-  border-radius:13px;
-  outline:none;
-  background:#fafcff;
+.field input,.field select{
+width:100%;padding:13px;border:1px solid #dce5f2;
+border-radius:13px;outline:none;background:#fafcff
 }
 
 .price{
-  background:#eef6ff;
-  padding:16px;
-  border-radius:15px;
-  margin:15px 0;
-  color:#075fc8;
-  font-weight:bold;
+background:#eef6ff;padding:16px;border-radius:15px;
+margin:15px 0;color:#075fc8;font-weight:bold;line-height:2
 }
 
-.submit{
-  width:100%;
-  border:0;
-  padding:16px;
-  border-radius:15px;
-  background:linear-gradient(135deg,#075bea,#10a9ed);
-  color:white;
-  font-size:17px;
-  font-weight:bold;
-  cursor:pointer;
+.submit,.save{
+width:100%;border:0;padding:15px;border-radius:15px;
+background:linear-gradient(135deg,#075bea,#10a9ed);
+color:white;font-size:17px;font-weight:bold
+}
+
+.adminBtn{
+margin-top:30px;width:100%;padding:14px;border:0;
+border-radius:15px;background:#172033;color:white;font-weight:bold
+}
+
+.adminGrid{
+display:grid;grid-template-columns:1fr 1fr;gap:12px
+}
+
+.adminCard{
+border:1px solid #e1e8f3;border-radius:18px;padding:15px
+}
+
+.adminCard h3{font-size:15px;margin-bottom:12px;color:#075fc8}
+
+.adminCard label{
+font-size:12px;color:#68758a;display:block;margin:8px 0 5px
+}
+
+.adminCard input{
+width:100%;padding:11px;border:1px solid #dce5f2;
+border-radius:10px
 }
 
 .notice{
-  margin-top:25px;
-  background:#fff8df;
-  color:#745900;
-  padding:15px;
-  border-radius:15px;
-  line-height:1.9;
-  font-size:13px;
+margin-top:20px;background:#fff8df;color:#745900;
+padding:14px;border-radius:14px;line-height:1.9;font-size:12px
 }
 
-.footer{
-  text-align:center;
-  color:#7c899c;
-  padding:25px;
-  font-size:13px;
-}
-
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#16b866;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:28px;
-  box-shadow:0 8px 20px #0003;
-  text-decoration:none;
-}
+.footer{text-align:center;color:#7c899c;padding:25px;font-size:13px}
 
 @media(max-width:600px){
-  .hero h2{
-    font-size:26px;
-  }
-
-  .services{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .service{
-    min-height:170px;
-    padding:20px 10px;
-  }
-
-  .balanceValue{
-    font-size:24px;
-  }
+.hero h2{font-size:26px}
+.adminGrid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -317,421 +155,525 @@ button,input,select{
 
 <header class="header">
 
-  <div class="top">
+<div class="top">
 
-    <button class="menu" onclick="showMenu()">☰</button>
+<button class="menu" onclick="showMenu()">☰</button>
 
-    <div class="logo">
+<div class="logo">
+<div class="brand">
+<h1>Habibi Pay</h1>
+<p>Money & Digital Services</p>
+</div>
+<div class="logoBox">HB</div>
+</div>
 
-      <div class="brand">
-        <h1>Habibi Pay</h1>
-        <p>Money & Digital Services</p>
-      </div>
+</div>
 
-      <div class="logoBox">HB</div>
-
-    </div>
-
-  </div>
-
-  <div class="hero">
-    <h2>به Habibi Pay خوش آمدید</h2>
-    <p>
-      خدمات پولی و دیجیتالی سریع، آسان و مطمئن
-      برای افغانستان و سایر خدمات آنلاین.
-    </p>
-  </div>
+<div class="hero">
+<h2>به Habibi Pay خوش آمدید</h2>
+<p>
+خدمات پولی و دیجیتالی سریع، آسان و مطمئن
+برای افغانستان و ایران
+</p>
+</div>
 
 </header>
 
 
 <main class="container">
 
-  <section class="balance">
+<section class="balance">
 
-    <div class="balanceTop">
+<div class="balanceTop">
 
-      <div>
-        <div class="balanceTitle">واحد پول انتخابی</div>
-        <div class="balanceValue" id="currencyText">افغانی 🇦🇫</div>
-      </div>
+<div>
+<div class="balanceTitle">واحد پول</div>
+<div class="balanceValue" id="currencyText">افغانی 🇦🇫</div>
+</div>
 
-      <div class="currencyBox">
+<div class="currencyBox">
 
-        <button
-          class="currencyBtn active"
-          id="afnBtn"
-          onclick="setCurrency('AFN')">
-          AFN
-        </button>
+<button class="currencyBtn active"
+id="afnBtn" onclick="setCurrency('AFN')">
+AFN
+</button>
 
-        <button
-          class="currencyBtn"
-          id="irtBtn"
-          onclick="setCurrency('IRT')">
-          تومان
-        </button>
+<button class="currencyBtn"
+id="irtBtn" onclick="setCurrency('IRT')">
+تومان
+</button>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-    <div style="color:#8290a5;font-size:13px;">
-      قیمت‌ها و سفارش‌ها بر اساس واحد انتخابی نمایش داده می‌شوند.
-    </div>
+</section>
 
-  </section>
 
+<h2 class="sectionTitle">خدمات ما</h2>
 
-  <h2 class="sectionTitle">خدمات ما</h2>
+<section class="services">
 
-  <section class="services">
+<button class="service" onclick="openOrder('uc')">
+<div class="icon">🎮</div>
+<h3>خرید UC</h3>
+<p>UC پابجی موبایل</p>
+</button>
 
-    <button class="service" onclick="openOrder('uc')">
+<button class="service" onclick="openOrder('hawala')">
+<div class="icon">💸</div>
+<h3>احواله جات</h3>
+<p>ارسال پول به افغانستان</p>
+</button>
 
-      <div class="icon">🎮</div>
+<button class="service" onclick="openOrder('imo')">
+<div class="icon">💎</div>
+<h3>الماس IMO</h3>
+<p>خرید الماس IMO</p>
+</button>
 
-      <h3>خرید UC</h3>
+<button class="service" onclick="openOrder('credit')">
+<div class="icon">📱</div>
+<h3>کریدت و بسته</h3>
+<p>شارژ و اینترنت</p>
+</button>
 
-      <p>UC پابجی موبایل</p>
+<button class="service" onclick="openOrder('gift')">
+<div class="icon">🎁</div>
+<h3>گیفت</h3>
+<p>گیفت بازی و برنامه‌ها</p>
+</button>
 
-    </button>
+<button class="service" onclick="openOrder('account')">
+<div class="icon">🤝</div>
+<h3>اکانت</h3>
+<p>خرید و فروش اکانت</p>
+</button>
 
+</section>
 
-    <button class="service" onclick="openOrder('hawala')">
 
-      <div class="icon">💸</div>
+<section class="order" id="orderBox">
 
-      <h3>احواله جات</h3>
+<h2 id="orderTitle">ثبت سفارش</h2>
 
-      <p>ارسال پول به افغانستان</p>
+<div class="field">
+<label>نوع خدمات</label>
 
-    </button>
+<select id="serviceSelect" onchange="calculatePrice()">
 
+<option value="uc">خرید UC پابجی</option>
+<option value="imo">الماس IMO</option>
+<option value="credit">کریدت و بسته اینترنت</option>
+<option value="hawala">احواله جات</option>
+<option value="gift">گیفت</option>
+<option value="account">خرید و فروش اکانت</option>
 
-    <button class="service" onclick="openOrder('imo')">
+</select>
+</div>
 
-      <div class="icon">💎</div>
 
-      <h3>الماس IMO</h3>
+<div class="field">
+<label>مقدار / توضیحات</label>
+<input id="amount" placeholder="مثلاً 660 UC">
+</div>
 
-      <p>خرید الماس و خدمات دیجیتال</p>
 
-    </button>
+<div class="field">
+<label>آیدی یا شماره مشتری</label>
+<input id="customer" placeholder="شماره تماس یا ID">
+</div>
 
 
-    <button class="service" onclick="openOrder('credit')">
+<div class="field">
+<label>توضیحات</label>
+<input id="description" placeholder="توضیحات سفارش">
+</div>
 
-      <div class="icon">📱</div>
 
-      <h3>کریدت و بسته</h3>
+<div class="price" id="priceBox">
+قیمت را انتخاب کنید.
+</div>
 
-      <p>شارژ و اینترنت</p>
 
-    </button>
+<button class="submit" onclick="submitOrder()">
+ثبت سفارش
+</button>
 
+</section>
 
-    <button class="service" onclick="openOrder('gift')">
 
-      <div class="icon">🎁</div>
+<button class="adminBtn" onclick="openAdmin()">
+🔐 ورود به مدیریت قیمت‌ها
+</button>
 
-      <h3>هدیه و گیفت</h3>
 
-      <p>گیفت بازی و برنامه‌ها</p>
+<section class="admin" id="adminBox">
 
-    </button>
+<h2>⚙️ مدیریت قیمت‌ها</h2>
 
+<div class="field">
+<label>رمز مدیریت</label>
+<input id="adminPassword" type="password"
+placeholder="رمز مدیریت را وارد کنید">
+</div>
 
-    <button class="service" onclick="openOrder('account')">
+<button class="submit" onclick="loginAdmin()">
+ورود به پنل مدیریت
+</button>
 
-      <div class="icon">🤝</div>
 
-      <h3>خرید و فروش اکانت</h3>
+<div id="adminPanel" style="display:none;margin-top:25px">
 
-      <p>واسطه مطمئن معاملات</p>
+<div class="adminGrid">
 
-    </button>
+<div class="adminCard">
 
-  </section>
+<h3>🎮 UC پابجی</h3>
 
+<label>قیمت AFN</label>
+<input id="ucAfn" type="number">
 
-  <section class="order" id="orderBox">
+<label>قیمت تومان</label>
+<input id="ucIrt" type="number">
 
-    <h2 id="orderTitle">ثبت سفارش</h2>
+</div>
 
-    <div class="field">
 
-      <label>نوع خدمات</label>
+<div class="adminCard">
 
-      <select id="serviceSelect" onchange="calculatePrice()">
+<h3>💎 الماس IMO</h3>
 
-        <option value="uc">خرید UC پابجی</option>
-        <option value="imo">الماس IMO</option>
-        <option value="credit">کریدت و بسته اینترنت</option>
-        <option value="hawala">احواله جات</option>
-        <option value="gift">هدیه و گیفت</option>
-        <option value="account">خرید و فروش اکانت</option>
+<label>قیمت AFN</label>
+<input id="imoAfn" type="number">
 
-      </select>
+<label>قیمت تومان</label>
+<input id="imoIrt" type="number">
 
-    </div>
+</div>
 
 
-    <div class="field">
+<div class="adminCard">
 
-      <label>مقدار / توضیحات سفارش</label>
+<h3>📱 کریدت و بسته</h3>
 
-      <input
-        id="amount"
-        type="text"
-        placeholder="مثلاً 660 UC یا مبلغ احواله">
+<label>قیمت AFN</label>
+<input id="creditAfn" type="number">
 
-    </div>
+<label>قیمت تومان</label>
+<input id="creditIrt" type="number">
 
+</div>
 
-    <div class="field">
 
-      <label>شماره یا آیدی مشتری</label>
+<div class="adminCard">
 
-      <input
-        id="customer"
-        type="text"
-        placeholder="شماره تماس / ID">
+<h3>💸 احواله</h3>
 
-    </div>
+<label>قیمت / کارمزد AFN</label>
+<input id="hawalaAfn" type="number">
 
+<label>قیمت / کارمزد تومان</label>
+<input id="hawalaIrt" type="number">
 
-    <div class="field">
+</div>
 
-      <label>توضیحات</label>
 
-      <input
-        id="description"
-        type="text"
-        placeholder="توضیحات اضافی">
+<div class="adminCard">
 
-    </div>
+<h3>🎁 گیفت</h3>
 
+<label>قیمت AFN</label>
+<input id="giftAfn" type="number">
 
-    <div class="price" id="priceBox">
-      قیمت تقریبی: برای دریافت قیمت با ما تماس بگیرید.
-    </div>
+<label>قیمت تومان</label>
+<input id="giftIrt" type="number">
 
+</div>
 
-    <button class="submit" onclick="submitOrder()">
-      ثبت سفارش
-    </button>
 
+<div class="adminCard">
 
-    <div class="notice">
-      ⚠️ این نسخه فعلاً بخش ثبت سفارش را آماده می‌کند.
-      اتصال واقعی پرداخت آنلاین، انتقال خودکار پول و تحویل خودکار UC
-      باید در مرحله بعد به درگاه پرداخت و API مربوطه متصل شود.
-    </div>
+<h3>🤝 اکانت</h3>
 
-  </section>
+<label>قیمت AFN</label>
+<input id="accountAfn" type="number">
+
+<label>قیمت تومان</label>
+<input id="accountIrt" type="number">
+
+</div>
+
+</div>
+
+<br>
+
+<button class="save" onclick="savePrices()">
+💾 ذخیره قیمت‌ها
+</button>
+
+<div class="notice">
+قیمت‌ها روی همین دستگاه ذخیره می‌شوند.
+در مرحله بعد پنل مدیریت واقعی را به سرور وصل می‌کنیم
+تا تغییر قیمت از یک دستگاه برای همه مشتری‌ها اعمال شود.
+</div>
+
+</div>
+
+</section>
 
 </main>
 
 
 <footer class="footer">
-  <b>Habibi Pay</b>
-  <br>
-  Money & Digital Services
-  <br><br>
-  © 2026 Habibi Pay
+<b>Habibi Pay</b>
+<br>
+Money & Digital Services
+<br><br>
+© 2026 Habibi Pay
 </footer>
-
-
-<a
-  class="whatsapp"
-  href="https://wa.me/"
-  target="_blank">
-  ☎
-</a>
 
 
 <script>
 
-let currency = "AFN";
+let currency="AFN";
 
-const prices = {
-
-  AFN:{
-    uc:"قیمت UC بر اساس نرخ فروش تعیین می‌شود.",
-    imo:"قیمت الماس IMO بر اساس بسته انتخابی.",
-    credit:"قیمت کریدت و بسته بر اساس نوع بسته.",
-    hawala:"کارمزد احواله پس از ثبت مبلغ محاسبه می‌شود.",
-    gift:"قیمت گیفت بر اساس نوع هدیه.",
-    account:"قیمت اکانت پس از بررسی اعلام می‌شود."
-  },
-
-  IRT:{
-    uc:"قیمت UC به تومان بر اساس نرخ فروش تعیین می‌شود.",
-    imo:"قیمت الماس IMO به تومان.",
-    credit:"قیمت کریدت و بسته به تومان.",
-    hawala:"کارمزد احواله به تومان محاسبه می‌شود.",
-    gift:"قیمت گیفت به تومان.",
-    account:"قیمت اکانت پس از بررسی اعلام می‌شود."
-  }
-
+let prices={
+uc:{AFN:0,IRT:0},
+imo:{AFN:0,IRT:0},
+credit:{AFN:0,IRT:0},
+hawala:{AFN:0,IRT:0},
+gift:{AFN:0,IRT:0},
+account:{AFN:0,IRT:0}
 };
 
 
-function setCurrency(type){
+/* بارگذاری قیمت‌های ذخیره‌شده */
 
-  currency = type;
+const saved=localStorage.getItem("habibiPrices");
 
-  const text = document.getElementById("currencyText");
-
-  const afnBtn = document.getElementById("afnBtn");
-  const irtBtn = document.getElementById("irtBtn");
-
-  if(type === "AFN"){
-
-    text.innerHTML = "افغانی 🇦🇫";
-
-    afnBtn.classList.add("active");
-    irtBtn.classList.remove("active");
-
-  }else{
-
-    text.innerHTML = "تومان 🇮🇷";
-
-    irtBtn.classList.add("active");
-    afnBtn.classList.remove("active");
-
-  }
-
-  calculatePrice();
+if(saved){
+try{
+prices=JSON.parse(saved);
+}catch(e){}
 }
 
+
+/* واحد پول */
+
+function setCurrency(type){
+
+currency=type;
+
+document.getElementById("currencyText").innerHTML=
+type==="AFN" ? "افغانی 🇦🇫" : "تومان 🇮🇷";
+
+document.getElementById("afnBtn")
+.classList.toggle("active",type==="AFN");
+
+document.getElementById("irtBtn")
+.classList.toggle("active",type==="IRT");
+
+calculatePrice();
+}
+
+
+/* باز کردن سفارش */
 
 function openOrder(type){
 
-  const box = document.getElementById("orderBox");
+document.getElementById("serviceSelect").value=type;
 
-  const select = document.getElementById("serviceSelect");
+let names={
+uc:"🎮 سفارش خرید UC",
+imo:"💎 سفارش الماس IMO",
+credit:"📱 سفارش کریدت و بسته",
+hawala:"💸 درخواست احواله",
+gift:"🎁 سفارش گیفت",
+account:"🤝 سفارش اکانت"
+};
 
-  select.value = type;
+document.getElementById("orderTitle").innerText=names[type];
 
-  const titles = {
+document.getElementById("orderBox").classList.add("show");
 
-    uc:"🎮 سفارش خرید UC پابجی",
+calculatePrice();
 
-    imo:"💎 سفارش الماس IMO",
-
-    credit:"📱 سفارش کریدت و بسته اینترنت",
-
-    hawala:"💸 درخواست احواله جات",
-
-    gift:"🎁 سفارش گیفت",
-
-    account:"🤝 درخواست خرید / فروش اکانت"
-
-  };
-
-  document.getElementById("orderTitle").innerText =
-    titles[type];
-
-  box.classList.add("show");
-
-  calculatePrice();
-
-  box.scrollIntoView({
-    behavior:"smooth",
-    block:"start"
-  });
+document.getElementById("orderBox")
+.scrollIntoView({behavior:"smooth"});
 
 }
 
+
+/* نمایش قیمت */
 
 function calculatePrice(){
 
-  const service =
-    document.getElementById("serviceSelect").value;
+let service=
+document.getElementById("serviceSelect").value;
 
-  const box =
-    document.getElementById("priceBox");
+let value=prices[service][currency];
 
-  box.innerText =
-    "💰 " +
-    prices[currency][service] +
-    " | واحد: " +
-    (currency === "AFN" ? "افغانی 🇦🇫" : "تومان 🇮🇷");
+let unit=currency==="AFN"?"افغانی 🇦🇫":"تومان 🇮🇷";
+
+if(Number(value)>0){
+
+document.getElementById("priceBox").innerHTML=
+"💰 قیمت فعلی: <b>"+
+Number(value).toLocaleString()+
+" "+unit+
+"</b>";
+
+}else{
+
+document.getElementById("priceBox").innerHTML=
+"⚠️ هنوز قیمت این خدمت تعیین نشده است.<br>"+
+"واحد: "+unit;
 
 }
 
+}
+
+
+/* مدیریت */
+
+function openAdmin(){
+
+document.getElementById("adminBox").classList.add("show");
+
+document.getElementById("adminBox")
+.scrollIntoView({behavior:"smooth"});
+
+}
+
+
+function loginAdmin(){
+
+let password=
+document.getElementById("adminPassword").value;
+
+/* رمز موقت پنل */
+
+if(password==="2580"){
+
+document.getElementById("adminPanel").style.display="block";
+
+loadAdminPrices();
+
+}else{
+
+alert("❌ رمز مدیریت اشتباه است.");
+
+}
+
+}
+
+
+/* قرار دادن قیمت‌ها در پنل */
+
+function loadAdminPrices(){
+
+document.getElementById("ucAfn").value=prices.uc.AFN;
+document.getElementById("ucIrt").value=prices.uc.IRT;
+
+document.getElementById("imoAfn").value=prices.imo.AFN;
+document.getElementById("imoIrt").value=prices.imo.IRT;
+
+document.getElementById("creditAfn").value=prices.credit.AFN;
+document.getElementById("creditIrt").value=prices.credit.IRT;
+
+document.getElementById("hawalaAfn").value=prices.hawala.AFN;
+document.getElementById("hawalaIrt").value=prices.hawala.IRT;
+
+document.getElementById("giftAfn").value=prices.gift.AFN;
+document.getElementById("giftIrt").value=prices.gift.IRT;
+
+document.getElementById("accountAfn").value=prices.account.AFN;
+document.getElementById("accountIrt").value=prices.account.IRT;
+
+}
+
+
+/* ذخیره قیمت‌ها */
+
+function savePrices(){
+
+prices.uc.AFN=Number(document.getElementById("ucAfn").value)||0;
+prices.uc.IRT=Number(document.getElementById("ucIrt").value)||0;
+
+prices.imo.AFN=Number(document.getElementById("imoAfn").value)||0;
+prices.imo.IRT=Number(document.getElementById("imoIrt").value)||0;
+
+prices.credit.AFN=Number(document.getElementById("creditAfn").value)||0;
+prices.credit.IRT=Number(document.getElementById("creditIrt").value)||0;
+
+prices.hawala.AFN=Number(document.getElementById("hawalaAfn").value)||0;
+prices.hawala.IRT=Number(document.getElementById("hawalaIrt").value)||0;
+
+prices.gift.AFN=Number(document.getElementById("giftAfn").value)||0;
+prices.gift.IRT=Number(document.getElementById("giftIrt").value)||0;
+
+prices.account.AFN=Number(document.getElementById("accountAfn").value)||0;
+prices.account.IRT=Number(document.getElementById("accountIrt").value)||0;
+
+localStorage.setItem(
+"habibiPrices",
+JSON.stringify(prices)
+);
+
+calculatePrice();
+
+alert("✅ قیمت‌ها با موفقیت ذخیره شد.");
+
+}
+
+
+/* ثبت سفارش */
 
 function submitOrder(){
 
-  const amount =
-    document.getElementById("amount").value.trim();
+let amount=document.getElementById("amount").value.trim();
+let customer=document.getElementById("customer").value.trim();
 
-  const customer =
-    document.getElementById("customer").value.trim();
+if(!amount){
+alert("لطفاً مقدار سفارش را وارد کنید.");
+return;
+}
 
-  const description =
-    document.getElementById("description").value.trim();
+if(!customer){
+alert("لطفاً شماره یا آیدی مشتری را وارد کنید.");
+return;
+}
 
-  const service =
-    document.getElementById("serviceSelect");
-
-  if(!amount){
-
-    alert("لطفاً مقدار یا توضیحات سفارش را وارد کنید.");
-
-    return;
-  }
-
-  if(!customer){
-
-    alert("لطفاً شماره یا آیدی مشتری را وارد کنید.");
-
-    return;
-  }
-
-  const serviceName =
-    service.options[service.selectedIndex].text;
-
-  const currencyName =
-    currency === "AFN"
-    ? "افغانی"
-    : "تومان";
-
-  const message =
-    "سلام Habibi Pay\n\n" +
-    "درخواست سفارش جدید\n" +
-    "خدمت: " + serviceName + "\n" +
-    "مقدار: " + amount + "\n" +
-    "واحد پول: " + currencyName + "\n" +
-    "مشتری: " + customer + "\n" +
-    "توضیحات: " + description;
-
-  alert(
-    "سفارش آماده شد.\n\n" +
-    message +
-    "\n\nدر مرحله بعد اتصال مستقیم سفارش به واتساپ و سیستم پرداخت را اضافه می‌کنیم."
-  );
+alert(
+"✅ سفارش ثبت شد.\n\n"+
+"Habibi Pay\n"+
+"واحد پول: "+
+(currency==="AFN"?"افغانی":"تومان")+
+"\nمقدار: "+amount+
+"\nمشتری: "+customer
+);
 
 }
 
 
+/* منو */
+
 function showMenu(){
 
-  alert(
-    "Habibi Pay\n\n" +
-    "خدمات پولی و دیجیتال\n" +
-    "خرید UC\n" +
-    "الماس IMO\n" +
-    "کریدت و بسته اینترنت\n" +
-    "احواله جات\n" +
-    "گیفت و خدمات دیجیتال"
-  );
+alert(
+"Habibi Pay\n\n"+
+"🎮 خرید UC\n"+
+"💎 الماس IMO\n"+
+"📱 کریدت و بسته\n"+
+"💸 احواله جات\n"+
+"🎁 گیفت\n"+
+"🤝 خرید و فروش اکانت"
+);
 
 }
 
 </script>
 
 </body>
-    </html>
+  </html>
